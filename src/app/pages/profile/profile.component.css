@@ -1,0 +1,21 @@
+.responsive-img {
+    max-width: 200px;
+    max-height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    /* background-color: rgb(243, 210, 112); */
+}
+
+.bg-color {
+    background-color: rgb(178, 201, 248);
+}
+
+.table {
+    width: 100%;
+    border: 0.5px solid rgb(243, 210, 112);
+}
+
+.table tr td {
+    padding: 15px 10px;
+    border: 1px solid rgb(243, 210, 112);
+}

@@ -1,0 +1,45 @@
+<div class="bootstrap-wrapper mt20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="bg-color">
+                    <mat-card-header>
+                        <mat-card-title>Read the instructions of this page</mat-card-title>
+                        <mat-card-subtitle>One step more to go</mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content class="ml20">
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+
+                        <ul>
+                            <li>This Exam is only for education purposes only.</li>
+                            <li>You should submit the exam paper within the given time.<b> The time given is {{quiz.numberOfQuestion*2}} Minutes.</b></li>
+                            <li>You can attempt the exam paper any number of times.</li>
+                            <li>There are <b>{{quiz.numberOfQuestion}}</b> questions this exam paper</li>
+                            <li>Each question gives <b>{{quiz.maxMarks/quiz.numberOfQuestion}}</b> marks</li>
+                            <li>All the questions are MCQ type questions</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click <b>Start Test</b> button to start the quiz</li>
+                            <li>The time will start the after you click the button</li>
+                            <li>Click next button to move to the next question</li>
+                            <li>After completing all the questions Click the Submit button</li>
+                        </ul>
+                    </mat-card-content>
+
+                    <mat-card-actions class="text-center mt20">
+                        <button (click)="startQuiz()" mat-raised-button color="primary"> Start Test </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

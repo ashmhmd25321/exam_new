@@ -1,0 +1,49 @@
+<div class="bootstrap-container mt20">
+
+    <div class="container-fluid">
+
+        <h1>Available Exam Papers</h1>
+
+        <div class="row" *ngIf="quizzes">
+
+            <div class="col-md-4 mt20" *ngFor="let q of quizzes">
+
+                <mat-card class="bg-color">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>
+                            {{q.title}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            Subject: {{q.category.title}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content class="">
+                        <p class="truncate">{{q.description}}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <!-- <button mat-button color="primary">View</button> -->
+                        <button mat-button [routerLink]="'/user-dashboard/instructions/'+q.qid" color="primary">Start</button>
+                        <button mat-button color="warn">Questions : {{q.numberOfQuestion}}</button>
+                        <button mat-button color="warn">Max Marks : {{q.maxMarks}}</button>
+                    </mat-card-actions>
+
+                </mat-card>
+
+            </div>
+
+            <div class="col-md-12" *ngIf="quizzes.length==0">
+                <mat-card>
+                    <mat-card-content>
+                        <h1>Right Now, There are no Exam papers in this Subject</h1>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

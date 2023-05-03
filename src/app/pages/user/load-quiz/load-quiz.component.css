@@ -1,0 +1,16 @@
+.truncate {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.example-header-image {
+    background-image: url('https://cdn.xxl.thumbs.canstockphoto.com/graduate-cap-flat-icon-graduation-cap-flat-icon-graduation-mortar-board-hat-with-gold-trim-flat-vector-clip-art_csp34358611.jpg');
+    background-size: cover;
+  }
+
+  .bg-color {
+    background-color: rgb(178, 201, 248);
+}

@@ -1,0 +1,35 @@
+<mat-sidenav-container class="bg-color">
+  <mat-sidenav
+    class="bg-color"
+    #sidenav
+    mode="over"
+    [fixedInViewport]="true"
+    [opened]="false"
+    [disableClose]="false"
+  >
+    <mat-list>
+      <mat-list-item routerLink="/user-dashboard/profile">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Profile
+      </mat-list-item>
+      <mat-list-item routerLink="/user-dashboard/0">
+        <mat-icon mat-list-icon>import_contacts</mat-icon> All Subjects
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item
+        *ngFor="let c of categories"
+        [routerLink]="['/user-dashboard/', c.cid]"
+      >
+        <mat-icon mat-list-icon>subject</mat-icon> {{ c.title }}
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-card class="bg-color mt20">
+    <mat-toolbar class="bg-color">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Menu</span>
+    </mat-toolbar>
+  </mat-card>
+</mat-sidenav-container>

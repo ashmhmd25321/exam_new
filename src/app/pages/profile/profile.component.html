@@ -1,0 +1,50 @@
+<mat-card class="bg-color mt20" *ngIf="user">
+    <h1>PROFILE DETAILS</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+                <!-- {{user | json}} -->
+
+                <div class="container text-center">
+                    <img src="../../../assets/default.jpg" alt="" class="responsive-img"/>
+                    <!-- width="150px" height="150px" -->
+
+                    <h1 class="mt20">{{login.getUser().firstName}} {{login.getUser().lastName}}</h1>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table Details -->
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{login.getUser().username}}</td>
+                            </tr>
+                            <tr>
+                                <td>User ID</td>
+                                <td>{{login.getUser().id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td>{{login.getUser().phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{login.getUser().authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{login.getUser().enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary" [routerLink]="'/user/' + login.getUser().id"><mat-icon>update</mat-icon> UPDATE PROFILE</button>
+        <!-- <button mat-raised-button color="accent">SHARE</button> -->
+      </mat-card-actions>
+</mat-card>

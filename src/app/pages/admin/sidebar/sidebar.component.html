@@ -1,0 +1,44 @@
+<mat-sidenav-container class="bg-color">
+  <mat-sidenav
+    class="bg-color"
+    #sidenav
+    mode="over"
+    [fixedInViewport]="true"
+    [opened]="false"
+    [disableClose]="false"
+  >
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin">
+        <mat-icon mat-list-icon>home</mat-icon> Home
+      </a>
+      <a mat-list-item routerLink="/admin/profile">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Profile
+      </a>
+      <a mat-list-item routerLink="/admin/categories">
+        <mat-icon mat-list-icon>class</mat-icon> Categories
+      </a>
+      <a mat-list-item routerLink="/admin/add-category">
+        <mat-icon mat-list-icon>playlist_add</mat-icon> Add Categories
+      </a>
+      <a mat-list-item routerLink="/admin/quizzes">
+        <mat-icon mat-list-icon>quiz</mat-icon> Exam Papers
+      </a>
+      <a mat-list-item routerLink="/admin/add-quiz">
+        <mat-icon mat-list-icon>control_point</mat-icon> Add Exam Paper
+      </a>
+      <button mat-list-item (click)="logout()">
+        <mat-icon mat-list-icon>logout</mat-icon> Logout
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="bg-color">
+    <mat-card class="bg-color mt20 bg-color">
+      <mat-toolbar class="bg-color">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Menu</span>
+      </mat-toolbar>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

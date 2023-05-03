@@ -1,0 +1,8 @@
+.bg-color {
+    background-color: rgb(178, 201, 248);
+}
+
+.example-header-image {
+    background-image: url('https://i.pinimg.com/originals/c5/9f/90/c59f90983d3d0392b446644a0272f398.jpg');
+    background-size: cover;
+  }
